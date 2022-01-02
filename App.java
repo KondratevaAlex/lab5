@@ -3,7 +3,9 @@ import Classes.*;
 
 public class App {
     public static void main(String[] args){
-        double ansper, anssur, dif;
+        double[] ansper = new double[2];
+		double[] anssur = new double[2];
+		double difper, difsur;
         int choice;
 		do{ 
         System.out.println("\nВыберите вид фигур для сравнения:\n1 - Треугольники\n2 - Прямоугольники(квадраты)\n3 - Параллелограммы\n4 - Трапеции\n5 - Круги\n:::");
@@ -12,80 +14,93 @@ public class App {
             switch (choice)
             {
 		case 1: {
-			Triangle arr = new Triangle();
-			ObjectInfo obj = new ObjectInfo();
-			
+			Triangle [] arr = new Triangle[2];
+			ObjectInfo [] obj = new ObjectInfo[2];
+			for (int i = 0; i < 2; i++) {
 				System.out.println("\nВведите данные  треугольника:\n");
-				arr.settri(arr);
-				obj.setInfo(obj);
-				arr.printtri(arr);
-				obj.printInfo(obj);
-				ansper= arr.triperimeter(arr);
-				anssur = arr.trisurf(arr);
-			
-			dif=anssur/ansper;
-			System.out.printf("\n\nОтношение объема треугольника к его периметру: ");
-			System.out.print(dif);
+				arr[i].settri(arr[i]);
+				obj[i].setInfo(obj[i]);
+				arr[i].printtri(arr[i]);
+				obj[i].printInfo(obj[i]);
+				ansper[i]= arr[i].triperimeter(arr[i]);
+				anssur[i] = arr[i].trisurf(arr[i]);
+			}
+			difper = ansper[0] / ansper[1];
+			difsur = anssur[0] / anssur[1];
+			System.out.printf("\n\nОтношение периметров треугольников друг к другу: %lf\n", difper);
+			System.out.printf("Отношение площадей треугольников друг к другу: %lf\n", difsur);
 			break;
 		}
 		case 2: {
-			Rectangle arr = new Rectangle();
-			ObjectInfo obj = new ObjectInfo();
+			Rectangle [] arr = new Rectangle[2];
+			ObjectInfo [] obj = new ObjectInfo[2];
+			for (int i = 0; i < 2; i++) {
 				System.out.printf("\nВведите данные прямоугольника:\n");
-				arr.setrect(arr);
-				obj.setInfo(obj);
-				arr.printrect(arr);
-				obj.printInfo(obj);
-				ansper = arr.rectperimeter(arr);
-				anssur = arr.rectsurf(arr);
-			dif=anssur/ansper;
-			System.out.printf("\n\nОтношение объема прямоугольника к его периметру: ");
-			System.out.print(dif);
+				arr[i].setrect(arr[i]);
+				obj[i].setInfo(obj[i]);
+				arr[i].printrect(arr[i]);
+				obj[i].printInfo(obj[i]);
+				ansper[i] = arr[i].rectperimeter(arr[i]);
+				anssur[i] = arr[i].rectsurf(arr[i]);
+			}
+			difper = ansper[0] / ansper[1];
+			difsur = anssur[0] / anssur[1];
+			System.out.printf("\n\nОтношение периметров треугольников друг к другу: %lf\n", difper);
+			System.out.printf("Отношение площадей треугольников друг к другу: %lf\n", difsur);
 			break;
 		}
 		case 3: {
-			Parallelogram arr = new Parallelogram();
-			ObjectInfo obj = new ObjectInfo();
+			Parallelogram [] arr = new Parallelogram[2];
+			ObjectInfo [] obj = new ObjectInfo[2];
+			for (int i = 0; i < 2; i++) {
 				System.out.printf("\nВведите данные %d параллелограмма:\n");
-				arr.setpar(arr);
-				obj.setInfo(obj);
-				arr.printpar(arr);
-				obj.printInfo(obj);
-				ansper = arr.parperimeter(arr);
-				anssur = arr.parsurf(arr);
-			dif=anssur/ansper;
-			System.out.printf("\n\nОтношение объема параллелограмма к его периметру: ");
-			System.out.print(dif);
+				arr[i].setpar(arr[i]);
+				obj[i].setInfo(obj[i]);
+				arr[i].printpar(arr[i]);
+				obj[i].printInfo(obj[i]);
+				ansper[i] = arr[i].parperimeter(arr[i]);
+				anssur[i] = arr[i].parsurf(arr[i]);
+			}
+			difper = ansper[0] / ansper[1];
+			difsur = anssur[0] / anssur[1];
+			System.out.printf("\n\nОтношение периметров треугольников друг к другу: %lf\n", difper);
+			System.out.printf("Отношение площадей треугольников друг к другу: %lf\n", difsur);
 			break;
 		}
 		case 4: {
-			Trapezoid arr = new Trapezoid();
-			ObjectInfo obj = new ObjectInfo();
+			Trapezoid [] arr = new Trapezoid[2];
+			ObjectInfo [] obj = new ObjectInfo[2];
+			for (int i = 0; i < 2; i++) {
 				System.out.printf("\nВведите данные трапеции:\n");
-				arr.settrap(arr);
-				obj.setInfo(obj);
-				arr.printtrap(arr);
-				obj.printInfo(obj);
-				ansper = arr.trapperimeter(arr);
-				anssur = arr.trapsurf(arr);
-			dif=anssur/ansper;
-			System.out.printf("\n\nОтношение объема трапеции к его периметру: ");
-			System.out.print(dif);
+				arr[i].settrap(arr[i]);
+				obj[i].setInfo(obj[i]);
+				arr[i].printtrap(arr[i]);
+				obj[i].printInfo(obj[i]);
+				ansper[i] = arr[i].trapperimeter(arr[i]);
+				anssur[i] = arr[i].trapsurf(arr[i]);
+			}
+			difper = ansper[0] / ansper[1];
+			difsur = anssur[0] / anssur[1];
+			System.out.printf("\n\nОтношение периметров треугольников друг к другу: %lf\n", difper);
+			System.out.printf("Отношение площадей треугольников друг к другу: %lf\n", difsur);
 			break;
 		}
 		case 5: {
-			Circle arr = new Circle();
-			ObjectInfo obj = new ObjectInfo();
+			Circle [] arr = new Circle[2];
+			ObjectInfo [] obj = new ObjectInfo[2];
 			System.out.printf("\nВведите данные %d круга:\n");
-				arr.setcirc(arr);
-				obj.setInfo(obj);
-				arr.printcirc(arr);
-				obj.printInfo(obj);
-				ansper = arr.circperimeter(arr);
-				anssur = arr.circsurf(arr);
-			dif=anssur/ansper;
-			System.out.printf("\n\nОтношение объема круга к его периметру: ");
-			System.out.print(dif);
+			for (int i = 0; i < 2; i++) {
+				arr[i].setcirc(arr[i]);
+				obj[i].setInfo(obj[i]);
+				arr[i].printcirc(arr[i]);
+				obj[i].printInfo(obj[i]);
+				ansper[i] = arr[i].circperimeter(arr[i]);
+				anssur[i] = arr[i].circsurf(arr[i]);
+			}
+			difper = ansper[0] / ansper[1];
+			difsur = anssur[0] / anssur[1];
+			System.out.printf("\n\nОтношение периметров треугольников друг к другу: %lf\n", difper);
+			System.out.printf("Отношение площадей треугольников друг к другу: %lf\n", difsur);
 			break;
 		}
 		   }
