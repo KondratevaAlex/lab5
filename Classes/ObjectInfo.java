@@ -39,4 +39,9 @@ public void printInfo(ObjectInfo obj)
 	Scanner in = new Scanner(System.in);
     System.out.printf("\nЦвет фигуры(1-красный, 2-синий, 3-зеленый, 4-желтый): %d\nДата работы: %d/%d/%d", colour, day, month, year);
 };
+
+public int ObjectAge(){
+	int age = 2022-year;
+	return age;
+}
 }
