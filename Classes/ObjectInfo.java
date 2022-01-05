@@ -20,6 +20,10 @@ public ObjectInfo(int colour, int day, int month, int year)
 	this.year = year;
 };
 
+public ObjectInfo(int noll){
+	colour=day=month=year=noll;
+};
+
 public ObjectInfo setInfo(ObjectInfo obj)
 {
 	Scanner in = new Scanner(System.in);

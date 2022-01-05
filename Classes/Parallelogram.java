@@ -7,6 +7,20 @@ public class Parallelogram {
     private double ygolalppar;
     private ObjectInfo another_info;
 
+    public Parallelogram(){
+        dlinaapar=dlinabpar=ygolalppar=0.0;
+    };
+
+    public Parallelogram(Double noll){
+        dlinaapar=dlinabpar=ygolalppar=noll;
+    };
+
+    public Parallelogram(double dlinaapar, double dlinabpar, double ygolalppar){
+        this.dlinaapar=dlinaapar;
+        this.dlinabpar=dlinabpar;
+        this.ygolalppar=ygolalppar;
+    };
+
     public Parallelogram setpar(Parallelogram paral){
         Scanner in = new Scanner(System.in);
         System.out.print("Длина стороны а: ");

@@ -6,6 +6,19 @@ public class Rectangle {
     private double dlinabrect;
     private ObjectInfo another_info;
 
+    public Rectangle(){
+        dlinaarect=dlinabrect=0.0;
+    };
+    
+    public Rectangle(double noll){
+        dlinaarect=dlinabrect=noll;
+    };
+
+    public Rectangle(double dlinaarect, double dlinabrect){
+        this.dlinaarect=dlinaarect;
+        this.dlinabrect=dlinabrect;
+    }
+
     public Rectangle setrect(Rectangle rect){
         Scanner in = new Scanner(System.in);
         System.out.print("Длина стороны а: ");

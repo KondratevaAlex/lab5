@@ -7,6 +7,14 @@ public class Circle {
     private double dlinarcirc;
     private ObjectInfo another_info;
 
+    public Circle(){
+        dlinarcirc=0.0;
+    };
+
+    public Circle(double noll){
+        dlinarcirc=noll;
+    };
+
     public Circle setcirc(Circle circ){
         Scanner in = new Scanner(System.in);
         System.out.print("Длина радиуса r: ");

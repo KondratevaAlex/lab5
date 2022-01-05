@@ -14,6 +14,13 @@ public class Student{
        count++;
      };
 
+     public Student(String name){
+      this.name = name;
+      patronymic = "None";
+      surname = "None";
+      count++;
+    };
+
      public Student(String name,String patronymic,String surname,int age){
        this.name = name;
        this.patronymic = patronymic;
