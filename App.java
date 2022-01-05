@@ -8,6 +8,19 @@ public class App {
 		int[] age = new int[2];
 		double difper, difsur;
         int choice;
+		Student student1 = new Student();
+        student1.set();
+        student1.printInfo();
+        student1.getFIO();
+
+		Student student2 = new Student();
+        student2.set();
+        student2.printInfo();
+        student2.getFIO();
+
+		int counter = Student.getCount();
+		System.out.println("Количество студентов: " + counter);
+
 		do{ 
         System.out.println("\nВыберите вид фигур для сравнения:\n1 - Треугольники\n2 - Прямоугольники(квадраты)\n3 - Параллелограммы\n4 - Трапеции\n5 - Круги\n:::");
         Scanner in = new Scanner(System.in);
