@@ -20,6 +20,14 @@ public class App {
 		int counter = Student.getCount();
 		System.out.println("Количество студентов: " + counter);
 
+		Triangle[] arrtri=new Triangle[2];
+		arrtri[0]=new Triangle(1);
+		arrtri[1]=new Triangle(2);
+		arrtri[2]=new Triangle(3);
+
+		for (int i = 0; i < 3; i++)
+			arrtri[i].printtri(arrtri[i]);
+
 		do{ 
         System.out.println("\nВыберите вид фигур для сравнения:\n1 - Треугольники\n2 - Прямоугольники(квадраты)\n3 - Параллелограммы\n4 - Трапеции\n5 - Круги\n:::");
         Scanner in = new Scanner(System.in);
