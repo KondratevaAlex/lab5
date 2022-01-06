@@ -20,13 +20,43 @@ public class App {
 		int counter = Student.getCount();
 		System.out.println("Количество студентов: " + counter);
 
-		Triangle[] arrtri=new Triangle[2];
+		Triangle[] arrtri=new Triangle[3];
 		arrtri[0]=new Triangle(1);
 		arrtri[1]=new Triangle(2);
 		arrtri[2]=new Triangle(3);
 
-		for (int i = 0; i < 3; i++)
+		for (int i = 0; i < 3; i++){
 			arrtri[i].printtri(arrtri[i]);
+		}
+		Rectangle[] Array = new Rectangle[3];
+			System.out.println("\nВведите данные 3 прямоугольников: ");
+			 for (int i = 0; i < 3; i++)
+				{
+					Array[i] = new Rectangle();
+					Array[i].setrect(Array[i]);
+				}
+			System.out.print("Одномерный массив точек: ");
+			 for (int i = 0; i < 3; i++)
+			 {
+				 Array[i].printrect(Array[i]);
+			 }
+		Rectangle[][] newArray = new Rectangle[2][2];
+		System.out.println("\nВведите данные 4 прямоугольников: ");
+		for (int i = 0; i < 2; i++)
+		{
+			for (int j = 0; j < 2; j++)
+			  {
+			   newArray[i][j] = new Rectangle();
+			   newArray[i][j].setrect(newArray[i][j]);
+			  }
+			}
+		System.out.println("Двумерный массив фигур:");
+			for (int i = 0; i < 2; i++)
+			{
+			 for (int j = 0; j < 2; j++)
+			 newArray[i][j].printrect(newArray[i][j]);
+			 System.out.print("\n");
+		  }
 
 		do{ 
         System.out.println("\nВыберите вид фигур для сравнения:\n1 - Треугольники\n2 - Прямоугольники(квадраты)\n3 - Параллелограммы\n4 - Трапеции\n5 - Круги\n:::");
