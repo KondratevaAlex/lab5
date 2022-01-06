@@ -17,14 +17,30 @@ public class Rectangle {
     public Rectangle(double dlinaarect, double dlinabrect){
         this.dlinaarect=dlinaarect;
         this.dlinabrect=dlinabrect;
-    }
+    };
 
     public Rectangle setrect(Rectangle rect){
         Scanner in = new Scanner(System.in);
         System.out.print("Длина стороны а: ");
+        try{
         dlinaarect=in.nextDouble();
+        if(dlinaarect<0){
+            throw new Exception("Некорректный ввод.");
+        }
+        }
+        catch (Exception ex){
+            System.out.println(ex.getMessage());
+        }
         System.out.print("Длина стороны b: ");
+        try{
         dlinabrect=in.nextDouble();
+        if(dlinabrect<0){
+            throw new Exception("Некорректный ввод.");
+        }
+        }
+        catch (Exception ex){
+            System.out.println(ex.getMessage());
+        }
         return rect;
     };
     public void printrect(Rectangle rect){
