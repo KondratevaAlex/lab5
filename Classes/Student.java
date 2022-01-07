@@ -2,9 +2,9 @@ package Classes;
 import java.util.Scanner;
 
 public class Student{
-     private String name;
-     private String patronymic;
-     private String surname;
+     protected String name;
+     protected String patronymic;
+     protected String surname;
      private static int count = 0;
 
      public Student(){
@@ -30,17 +30,17 @@ public class Student{
 
      public void set(){
 	     Scanner scan = new Scanner(System.in);
-         System.out.print("Ââåäèòå èìÿ: ");
+         System.out.print("Введите имя: ");
          name = scan.nextLine();
-         System.out.print("Ââåäèòå îò÷åñòâî: ");
+         System.out.print("Введите отчество: ");
          patronymic = scan.nextLine();
-         System.out.print("Ââåäèòå ôàìèëèþ: ");
+         System.out.print("Введите фамилию: ");
          surname = scan.nextLine();
      };
 
      public void printInfo(){
          String info = name + " " + patronymic + " " + surname;
-         System.out.println("Ñòóäåíò: " + info );
+         System.out.println(info);
      };
 
      public void getFIO() {
@@ -48,7 +48,7 @@ public class Student{
          fio[0] = surname.charAt(0);
          fio[1] = patronymic.charAt(0);
          fio[2] = name.charAt(0);
-         System.out.println("ÔÈÎ: " + fio[0] + fio[1] + fio[2]);
+         System.out.println("ФИО: " + fio[0] + fio[1] + fio[2]);
        };
 
      public static int getCount(){
