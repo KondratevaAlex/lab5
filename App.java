@@ -8,13 +8,18 @@ public class App {
 		int[] age = new int[2];
 		double difper, difsur;
         int choice;
-		Student Student1 = new Student();//вызов конструктора без параметров
+
+		Teacher teacher = new Teacher("Victor", "Sergeevich", "Troitsky", 18);
+		teacher.printInfo();
+		teacher.estimate();
+
+		Student Student1 = new Student();
 		Student1.printInfo();
 
-		Student Student2 = new Student("Ivanov");//вызов конструктора с одним параметром
+		Student Student2 = new Student("Ivanov");
 		Student2.printInfo();
 
-		Student student3 = new Student("Ivan","Ivanovich","Popov",21);//вызов конструктора со всеми параметрами
+		Student student3 = new Student("Ivan","Ivanovich","Popov");
 		student3.printInfo();
 
 		int counter = Student.getCount();

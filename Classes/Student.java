@@ -21,7 +21,7 @@ public class Student{
       count++;
     };
 
-     public Student(String name,String patronymic,String surname,int age){
+     public Student(String name,String patronymic,String surname){
        this.name = name;
        this.patronymic = patronymic;
        this.surname = surname;
@@ -54,4 +54,10 @@ public class Student{
      public static int getCount(){
        return count;
        };
+
+     public void set(String name, String patronymic, String surname){
+        this.name = name;
+        this.patronymic = patronymic;
+        this.surname = surname;
+      };
 }
