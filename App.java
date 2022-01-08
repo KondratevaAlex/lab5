@@ -10,17 +10,17 @@ public class App {
         int choice;
 
 		Teacher teacher = new Teacher("Victor", "Sergeevich", "Troitsky", 18);
-		teacher.printInfo();
+		System.out.printf("%s\n",teacher.toString());
 		teacher.estimate();
 
 		Student Student1 = new Student();
-		Student1.printInfo();
+		System.out.printf("%s\n",Student1.toString());
 
 		Student Student2 = new Student("Ivanov");
-		Student2.printInfo();
+		System.out.printf("%s\n",Student2.toString());
 
-		Student student3 = new Student("Ivan","Ivanovich","Popov");
-		student3.printInfo();
+		Student Student3 = new Student("Ivan","Ivanovich","Popov");
+		System.out.printf("%s\n",Student3.toString());
 
 		int counter = Student.getCount();
 		System.out.println("Количество студентов: " + counter);

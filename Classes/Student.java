@@ -38,10 +38,10 @@ public class Student{
          surname = scan.nextLine();
      };
 
-     public void printInfo(){
-         String info = name + " " + patronymic + " " + surname;
-         System.out.println(info);
-     };
+     public String toString()
+      {
+         return name + " " + patronymic + " " + surname;
+      }
 
      public void getFIO() {
 	     char [] fio = new char[3];

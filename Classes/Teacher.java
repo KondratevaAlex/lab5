@@ -23,4 +23,8 @@ public void estimate() {
         super.set(name,patronymic,surname);
         this.experience = experience;
    }
+  public String toString()
+    {
+       return name + " " + patronymic + " " + surname + " Ñòàæ â ãîäàõ: " + experience;
+    }
 }
