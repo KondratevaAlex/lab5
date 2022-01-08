@@ -1,7 +1,7 @@
 package Classes;
 import java.util.Scanner;
 
-public class Student extends People implements WReview
+public class Student extends People implements WReview, Cloneable
 {
      protected String name;
      protected String patronymic;
@@ -80,5 +80,17 @@ public class Student extends People implements WReview
          System.out.print("Комментарий студента: ");
          review = scan.nextLine();
          return review;
+       }
+       public Object clone()
+       {
+          try
+           {
+             return (Student)super.clone();
+           }
+        catch(CloneNotSupportedException e)
+          {
+
+          }
+        return this;
        }
 }
