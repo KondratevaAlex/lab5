@@ -1,7 +1,7 @@
 package Classes;
 import java.util.Scanner;
 
-public class Teacher extends Student
+public class Teacher extends Student implements WReview
 {
     protected int mark;
     protected int experience;
@@ -38,5 +38,15 @@ public void estimate() {
   public void getAnotherInformation()
     {
       System.out.println("Ученая степень: " + AcademicDegree);
+    }
+    public String WriteReview()
+    {
+      Scanner scan = new Scanner(System.in);
+      System.out.print("Оценка преподавателя: ");
+      mark = scan.nextInt();
+      String review;
+      System.out.print("Отзыв преподавателя: ");
+      review = scan.nextLine();
+      return review;
     }
 }

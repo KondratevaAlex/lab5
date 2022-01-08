@@ -1,7 +1,7 @@
 package Classes;
 import java.util.Scanner;
 
-public class Student extends People
+public class Student extends People implements WReview
 {
      protected String name;
      protected String patronymic;
@@ -73,4 +73,12 @@ public class Student extends People
       {
           System.out.println("Группа: " + group);
       };
+    public String WriteReview()
+       {
+         Scanner scan = new Scanner(System.in);
+         String review;
+         System.out.print("Комментарий студента: ");
+         review = scan.nextLine();
+         return review;
+       }
 }

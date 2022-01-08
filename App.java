@@ -13,11 +13,16 @@ public class App {
 		Student student = new Student("Victor", "Vladimirovich", "Babarykin");
         teacher.setAnotherInformation();
         student.setAnotherInformation();
-		System.out.printf("%s\n",teacher.toString());
+		System.out.println(teacher.toString());
 		teacher.getAnotherInformation();
-      	System.out.printf("%s\n",student.toString());
+		System.out.println(student.toString());
 		student.getAnotherInformation();
-		
+		String studentReview, teacherReview;
+		studentReview = student.WriteReview();
+		teacherReview = teacher.WriteReview();
+		System.out.println("Отзыв преподавателя: " + teacherReview);
+		System.out.println("Отзыв студента: " + studentReview);
+
 		//teacher.estimate();
 
 		//Student Student1 = new Student();
