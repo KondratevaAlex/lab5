@@ -5,6 +5,7 @@ public class Teacher extends Student
 {
     protected int mark;
     protected int experience;
+    protected String AcademicDegree;
 
 public Teacher(String name, String patronymic, String surname, int experience)
     {
@@ -26,5 +27,16 @@ public void estimate() {
   public String toString()
     {
        return name + " " + patronymic + " " + surname + " Ñòàæ â ãîäàõ: " + experience;
+    }
+    public void setAnotherInformation()
+    {
+      Scanner scan = new Scanner(System.in);
+        System.out.print("Ученая степень преподавателя: ");
+      AcademicDegree = scan.nextLine();
+    }
+
+  public void getAnotherInformation()
+    {
+      System.out.println("Ученая степень: " + AcademicDegree);
     }
 }

@@ -1,10 +1,12 @@
 package Classes;
 import java.util.Scanner;
 
-public class Student{
+public class Student extends People
+{
      protected String name;
      protected String patronymic;
      protected String surname;
+     protected String group;
      private static int count = 0;
 
      public Student(){
@@ -59,5 +61,16 @@ public class Student{
         this.name = name;
         this.patronymic = patronymic;
         this.surname = surname;
+      };
+      public void setAnotherInformation()
+      {
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Учебная группа: ");
+        group = scan.nextLine();
+      };
+
+    public void getAnotherInformation()
+      {
+          System.out.println("Группа: " + group);
       };
 }

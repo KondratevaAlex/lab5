@@ -10,29 +10,37 @@ public class App {
         int choice;
 
 		Teacher teacher = new Teacher("Victor", "Sergeevich", "Troitsky", 18);
+		Student student = new Student("Victor", "Vladimirovich", "Babarykin");
+        teacher.setAnotherInformation();
+        student.setAnotherInformation();
 		System.out.printf("%s\n",teacher.toString());
-		teacher.estimate();
+		teacher.getAnotherInformation();
+      	System.out.printf("%s\n",student.toString());
+		student.getAnotherInformation();
+		
+		//teacher.estimate();
 
-		Student Student1 = new Student();
-		System.out.printf("%s\n",Student1.toString());
+		//Student Student1 = new Student();
+		//System.out.printf("%s\n",Student1.toString());
 
-		Student Student2 = new Student("Ivanov");
-		System.out.printf("%s\n",Student2.toString());
+		//Student Student2 = new Student("Ivanov");
+		//System.out.printf("%s\n",Student2.toString());
 
-		Student Student3 = new Student("Ivan","Ivanovich","Popov");
-		System.out.printf("%s\n",Student3.toString());
+		//Student Student3 = new Student("Ivan","Ivanovich","Popov");
+		//System.out.printf("%s\n",Student3.toString());
 
-		int counter = Student.getCount();
-		System.out.println("Количество студентов: " + counter);
+		//int counter = Student.getCount();
+		//System.out.println("Количество студентов: " + counter);
 
-		Triangle[] arrtri=new Triangle[3];
-		arrtri[0]=new Triangle(1);
-		arrtri[1]=new Triangle(2);
-		arrtri[2]=new Triangle(3);
+		//Triangle[] arrtri=new Triangle[3];
+		//arrtri[0]=new Triangle(1);
+		//arrtri[1]=new Triangle(2);
+		//arrtri[2]=new Triangle(3);
 
-		for (int i = 0; i < 3; i++){
-			arrtri[i].printtri(arrtri[i]);
-		}
+		//for (int i = 0; i < 3; i++){
+		//	arrtri[i].printtri(arrtri[i]);
+		//}
+		
 		Rectangle[] Array = new Rectangle[3];
 			System.out.println("\nВведите данные 3 прямоугольников: ");
 			 for (int i = 0; i < 3; i++)
